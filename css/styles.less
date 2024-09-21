@@ -1,0 +1,135 @@
+// Paleta de colores sacada de https://coolors.co/
+@primary: #9ae19d;
+@secondary: #909590;
+@dark: #474a48;
+@darker: #2c302e;
+
+// Reglas generales
+@padding:.5rem 2rem;
+@border-radius: 0.5rem;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.header {
+  background-color: @darker;
+  color: white;
+  padding: @padding;
+
+  h2 {
+    text-decoration: underline;
+  }
+}
+
+.menu {
+  background-color: @secondary;
+  ul {
+    margin: 0;
+    padding: @padding;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    list-style: none;
+
+    li button {
+      width: 8rem;
+      padding: 0.5rem 0;
+      background-color: @primary;
+      border: none;
+      border-radius: @border-radius;
+
+      a {
+        color: black;
+        font-size: small;
+        text-decoration: none;
+      }
+
+      &:hover {
+        a {
+          text-decoration: underline;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: 2rem;
+  padding: @padding;
+
+  @media (max-width: 1280px) {
+    justify-content: space-around;
+  }
+
+  .card {
+    background-color: @secondary;
+    border-radius: @border-radius;
+    height: 12rem;
+    color: white;
+    width: 16rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    h3 {
+      text-align: center;
+      margin: 0;
+      padding: @padding;
+      text-decoration: underline;
+    }
+
+    .card-body {
+      flex: 1;
+      padding: @padding;
+    }
+
+    .card-footer {
+      background-color: @primary;
+      padding: @padding;
+    }
+  }
+}
+
+.footer {
+  background-color: @dark;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  padding: @padding;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+
+  div {
+    text-align: center;
+  }
+
+  div:nth-child(1) {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      a {
+        color: white;
+      }
+    }
+  }
+
+  div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

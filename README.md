@@ -9,9 +9,11 @@ Tendremos una página de índice, que nos listará todos los ejercicios realizad
 - JavaScript
 ## Estilos utilizados*
 ### Paleta de colores
-- !#9ae19d `#9ae19d`
-- !#909590 `#909590`
-- !#474a48 `#474a48`
-- !#2c302e `#2c302e`
+```less
+@primary: #9ae19d;
+@secondary: #909590;
+@dark: #474a48;
+@darker: #2c302e;
+```
 Se ha traído una paleta de colores de [Coolors](https://coolors.co/), se usará durante toda la aplicación.
 \*  Estos estilos se encuentran sujetos a cambios y pueden ser modificados en cualquier momento

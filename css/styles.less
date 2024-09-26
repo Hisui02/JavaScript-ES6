@@ -8,6 +8,49 @@
 @padding:.5rem 2rem;
 @border-radius: 0.5rem;
 
+#mainContent{
+  display: none;
+}
+
+#login{
+  flex:1;
+  display: grid;
+  place-items: center;
+  form{
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background-color: @primary;
+    border-radius: @border-radius;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2,h5{
+      margin:0;
+    }
+
+    label{
+      display: block;
+      color: @darker;
+      font-weight: bold;
+    }
+
+    input{
+      padding: .5rem;
+      border-radius: @border-radius;
+      border: solid 1px @dark;
+    }
+
+    button{
+      background-color: @dark;
+      padding: .75rem 1.5rem;
+      color: white;
+      font-size: large;
+      border-radius: @border-radius;
+    }
+  }
+}
+
 body {
   margin: 0;
   padding: 0;

@@ -8,6 +8,7 @@
   <title>Javascript</title>
   <link href="./img/favicon.ico" rel="icon" type="image/x- icon" />
   <link rel="stylesheet" href="./css/styles.css">
+  <script defer src="./js/login.js"></script>
 </head>
 
 <body>
@@ -42,8 +43,24 @@
       </li>
     </ul>
   </div>
+    <!-- --------LOGIN---------- -->
+    <div id="login">
+      <form action="" id="loginForm">
+        <h2>Bienvenido!</h2>
+        <h5>Por favor inicia sesión</h5>
+        <div>
+          <label for="user">Usuario:</label>
+          <input type="text" name="user" id="user" placeholder="root">
+        </div>
+        <div>
+          <label for="psswd">Contraseña:</label>
+          <input type="password" name="psswd" id="psswd" placeholder="1234">
+        </div>
+        <button>Iniciar sesión</button>
+      </form>
+     </div>
   <!-- ------MAIN-CONTENT------ -->
-  <div class="main">
+  <div class="main" id="mainContent">
     <div class="card">
       <h3>Titulo ejercicio 01</h3>
       <div class="card-body">

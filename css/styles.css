@@ -1,3 +1,41 @@
+#mainContent {
+  display: none;
+}
+#login {
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+#login form {
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: #9ae19d;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#login form h2,
+#login form h5 {
+  margin: 0;
+}
+#login form label {
+  display: block;
+  color: #2c302e;
+  font-weight: bold;
+}
+#login form input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: solid 1px #474a48;
+}
+#login form button {
+  background-color: #474a48;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  font-size: large;
+  border-radius: 0.5rem;
+}
 body {
   margin: 0;
   padding: 0;

@@ -15,5 +15,7 @@ Tendremos una página de índice, que nos listará todos los ejercicios realizad
 @dark: #474a48;
 @darker: #2c302e;
 ```
+
 Se ha traído una paleta de colores de [Coolors](https://coolors.co/), se usará durante toda la aplicación.
+
 \*  Estos estilos se encuentran sujetos a cambios y pueden ser modificados en cualquier momento

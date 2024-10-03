@@ -8,15 +8,15 @@
 @padding:.5rem 2rem;
 @border-radius: 0.5rem;
 
-#mainContent{
+#mainContent {
   display: none;
 }
 
-#login{
-  flex:1;
+#login {
+  flex: 1;
   display: grid;
   place-items: center;
-  form{
+  form {
     gap: 1rem;
     padding: 1rem 2rem;
     background-color: @primary;
@@ -25,25 +25,26 @@
     flex-direction: column;
     justify-content: center;
 
-    h2,h5{
-      margin:0;
+    h2,
+    h5 {
+      margin: 0;
     }
 
-    label{
+    label {
       display: block;
       color: @darker;
       font-weight: bold;
     }
 
-    input{
-      padding: .5rem;
+    input {
+      padding: 0.5rem;
       border-radius: @border-radius;
       border: solid 1px @dark;
     }
 
-    button{
+    button {
       background-color: @dark;
-      padding: .75rem 1.5rem;
+      padding: 0.75rem 1.5rem;
       color: white;
       font-size: large;
       border-radius: @border-radius;
@@ -64,6 +65,24 @@ body {
   background-color: @darker;
   color: white;
   padding: @padding;
+
+  .datos {
+    display: inline-block;
+  }
+
+  .imagen {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 6rem;
+      object-fit: cover;
+    }
+    p {
+      text-align: center;
+    }
+  }
 
   h2 {
     text-decoration: underline;

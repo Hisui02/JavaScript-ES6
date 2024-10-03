@@ -11,6 +11,22 @@ body {
   color: white;
   padding: 0.5rem 2rem;
 }
+.header .datos {
+  display: inline-block;
+}
+.header .imagen {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header .imagen img {
+  width: 6rem;
+  object-fit: cover;
+}
+.header .imagen p {
+  text-align: center;
+}
 .header h2 {
   text-decoration: underline;
 }

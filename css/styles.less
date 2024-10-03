@@ -22,6 +22,24 @@ body {
   color: white;
   padding: @padding;
 
+  .datos {
+    display: inline-block;
+  }
+
+  .imagen {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 6rem;
+      object-fit: cover;
+    }
+    p {
+      text-align: center;
+    }
+  }
+
   h2 {
     text-decoration: underline;
   }

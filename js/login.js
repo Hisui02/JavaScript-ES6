@@ -1,16 +1,16 @@
-const user=prompt("Introduce tu usuario (root):")
-const psswd=prompt("Introduce tu contraseña (1234):")
+let user
+let psswd
 
 let isLoggedIn=false
 
-document.getElementsByTagName("body")[0].style.display="none"
+user=prompt("Introduce tu usuario (root):")
+if (user) psswd=prompt("Introduce tu contraseña (1234):")
 
 // Validación
 if (user=="root" && psswd=="1234") isLoggedIn=true
 
 if (!isLoggedIn){
-    alert("Usuario o contraseña incorrectos...")
-    location.reload()
+    if(confirm("Usuario o contraseña incorrectos...\n¿Quieres volver a intentarlo?")) location.reload()
 } else{
     alert("Acceso concedido, bienvenido "+user+"!")
     document.getElementsByTagName("body")[0].style.display="flex"

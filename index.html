@@ -8,10 +8,12 @@
   <title>Javascript</title>
   <link href="./img/favicon.ico" rel="icon" type="image/x- icon" />
   <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/loadExercise.js"></script>
   <script src="./js/getCookies.js"></script>
   <script src="./js/setCookies.js"></script>
   <script src="./js/eraseCookies.js"></script>
   <script defer src="./js/login.js"></script>
+  <script defer src="./js/script.js"></script>
 </head>
 
 <body>
@@ -25,11 +27,27 @@
     <div class="imagen">
       <img src="./img/private/yo.png" alt="MI FOTO">
       <p>Álvaro Leiva García</p>
-      <button id="logoutButton" onclick="logout()">Cerrar sesión</button>
     </div>
   </div>
-  <!-- ---------MENU----------- -->
-  <div class="menu">
+    <!-- --------LOGIN---------- -->
+    <div id="login">
+      <form action="" id="loginForm">
+        <h2>Bienvenido!</h2>
+        <h5>Por favor inicia sesión</h5>
+        <div>
+          <label for="user">Usuario:</label>
+          <input type="text" name="user" id="user" value="root" placeholder="Usuario" required>
+        </div>
+        <div>
+          <label for="psswd">Contraseña:</label>
+          <input type="password" name="psswd" id="psswd" value="1234" placeholder="Contraseña" required>
+        </div>
+        <button>Iniciar sesión</button>
+        <span id="greeter"></span>
+      </form>
+     </div>
+     <!-- ---------MENU----------- -->
+  <div class="menu" id="menu">
     <ul>
       <li>
         <button>
@@ -51,25 +69,16 @@
           <a href="https://github.com/Hisui02/JavaScript-ES6">GitHub Repo</a>
         </button>
       </li>
+      <li>
+        <button id="numberExercise">
+          <span>Number</span>
+        </button>
+      </li>
+      <li>
+        <button id="logoutButton">Cerrar sesión</button>
+      </li>
     </ul>
   </div>
-    <!-- --------LOGIN---------- -->
-    <div id="login">
-      <form action="" id="loginForm">
-        <h2>Bienvenido!</h2>
-        <h5>Por favor inicia sesión</h5>
-        <div>
-          <label for="user">Usuario:</label>
-          <input type="text" name="user" id="user" placeholder="root">
-        </div>
-        <div>
-          <label for="psswd">Contraseña:</label>
-          <input type="password" name="psswd" id="psswd" placeholder="1234">
-        </div>
-        <button>Iniciar sesión</button>
-        <span id="greeter"></span>
-      </form>
-     </div>
   <!-- ------MAIN-CONTENT------ -->
   <div class="main" id="mainContent">
     <div class="card">

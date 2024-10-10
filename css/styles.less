@@ -1,14 +1,13 @@
-// Paleta de colores sacada de https://coolors.co/
-@primary: #9ae19d;
-@secondary: #909590;
-@dark: #474a48;
-@darker: #2c302e;
+@import url(./variables.less);
 
 // Reglas generales
 @padding:.5rem 2rem;
 @border-radius: 0.5rem;
 
 #mainContent {
+  display: none;
+}
+#menu {
   display: none;
 }
 
@@ -82,14 +81,6 @@ body {
     p {
       text-align: center;
     }
-    #logoutButton {
-      display: none;
-      background-color: @primary;
-      color: @darker;
-      padding: 0.2rem 0.5rem;
-      font-size: large;
-      border-radius: @border-radius;
-    }
   }
 
   h2 {
@@ -107,25 +98,29 @@ body {
     gap: 0.75rem;
     list-style: none;
 
-    li button {
-      width: 8rem;
-      padding: 0.5rem 0;
-      background-color: @primary;
-      border: none;
-      border-radius: @border-radius;
+    li {
+      button {
+        width: 8rem;
+        padding: 0.5rem 0;
+        background-color: @primary;
+        border: none;
+        border-radius: @border-radius;
+        cursor: pointer;
 
-      a {
-        color: black;
-        font-size: small;
-        text-decoration: none;
-      }
-
-      &:hover {
         a {
+          color: black;
+          font-size: small;
+          text-decoration: none;
+        }
+
+        &:hover {
           text-decoration: underline;
           font-weight: bold;
         }
       }
+    }
+    :has(#logoutButton) {
+      margin-left: auto;
     }
   }
 }

@@ -1,0 +1,106 @@
+@import url(../../../css/variables.less);
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  height: 100dvh;
+  place-items: center;
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  select {
+    width: 50%;
+    text-align: center;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.datos {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 0.5rem;
+  input {
+    width: 80%;
+    padding: 0.5rem;
+    font-size: larger;
+    border: 0;
+    &:disabled {
+      background-color: white;
+      cursor: not-allowed;
+    }
+  }
+  button {
+    width: 20%;
+    img {
+      height: 1.5rem;
+    }
+  }
+}
+
+button {
+  padding: 1rem 0;
+  background-color: @primary;
+  font-size: larger;
+  border: 0;
+  box-shadow: 10px 5px 5px black;
+
+  &:active {
+    transform: translate(10px, 5px);
+    box-shadow: none;
+  }
+}
+
+#conversorUnidades {
+  background-color: @darker;
+  padding: 3rem;
+  width: 25rem;
+
+  .botones {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    button {
+      width: 100%;
+    }
+  }
+}
+
+#miniCalculadora {
+  background-color: @darker;
+  padding: 3rem;
+  width: 25rem;
+
+  .botones {
+    display: flex;
+    gap: 0.5rem;
+    .numeros {
+      width: 75%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      gap: 0.5rem 0.5rem;
+      grid-template-areas:
+        ". . ."
+        ". . ."
+        ". . ."
+        ". . .";
+    }
+    .operaciones {
+      display: grid;
+      width: 25%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      gap: 0.5rem 0.5rem;
+
+      button {
+        font-size: x-large;
+      }
+    }
+  }
+}

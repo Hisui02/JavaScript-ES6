@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript resultado</title>
+    <link href="./img/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+    <script defer src="./js/script.js"></script>
+    <script defer src="./js/conversorUnidades.js"></script>
+  </head>
+
+  <body>
+    <div id="conversorUnidades">
+      <div class="select">
+        <select name="tipo" id="tipo">
+          <option value="1">Mini Calculadora</option>
+          <option value="2" selected>Conversor de unidades</option>
+        </select>
+      </div>
+      <div class="datos">
+        <input type="text" name="pantalla" id="pantalla" />
+        <button id="clear">
+          <img src="./img/clear.png" alt="" />
+        </button>
+      </div>
+      <div class="botones">
+        <button class="base" id="B16">B16</button>
+        <button class="base" id="B8">B8</button>
+        <button class="base" id="B2">B2</button>
+      </div>
+    </div>
+  </body>
+</html>

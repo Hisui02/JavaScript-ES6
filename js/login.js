@@ -1,7 +1,7 @@
 const mostrarPagina = () => {
   document.getElementById("login").style.display = "none";
   document.getElementById("mainContent").style.display = "flex";
-  document.getElementById("logoutButton").style.display = "block";
+  document.getElementById("menu").style.display = "block";
 };
 
 const logoutButton = document.getElementById("logoutButton");

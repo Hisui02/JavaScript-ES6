@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript resultado</title>
+    <link href="./img/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+    <script defer src="./js/script.js"></script>
+    <script defer src="./js/miniCalculadora.js"></script>
+  </head>
+
+  <body>
+    <div id="miniCalculadora">
+      <div class="select">
+        <select name="tipo" id="tipo">
+          <option value="1" selected>Mini Calculadora</option>
+          <option value="2">Conversor de unidades</option>
+        </select>
+      </div>
+      <div class="datos">
+        <input type="text" name="pantalla" id="pantalla" value="0" />
+        <button id="clear">
+          <img src="./img/clear.png" alt="" />
+        </button>
+      </div>
+      <div class="botones">
+        <div class="numeros">
+          <button data-value="1">1</button>
+          <button data-value="2">2</button>
+          <button data-value="3">3</button>
+          <button data-value="4">4</button>
+          <button data-value="5">5</button>
+          <button data-value="6">6</button>
+          <button data-value="7">7</button>
+          <button data-value="8">8</button>
+          <button data-value="9">9</button>
+          <button data-value="0">0</button>
+          <button data-value=",">,</button>
+          <button id="equals">=</button>
+        </div>
+        <div class="operaciones">
+          <button data-operacion="+">+</button>
+          <button data-operacion="-">-</button>
+          <button data-operacion="*">*</button>
+          <button data-operacion="/">/</button>
+          <button data-operacion="entero">Entero</button>
+          <button data-operacion="decimal">Decimal</button>
+          <button data-operacion="!">!</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -14,6 +14,19 @@ const loadExercise = (exercise) => {
             </div>\
         </div>';
       break;
+    case "string":
+      main.innerHTML =
+        '\
+        <div class="card">\
+            <h3>Editor de cadenas</h3>\
+            <div class="card-body">\
+                <span>Gestor de cadenas de texto con varias funciones</span>\
+            </div>\
+            <div class="card-footer">\
+                <a href="./ejercicios/string/editorCadenas.html">>>Solución</a>\
+            </div>\
+        </div>';
+      break;
 
     default:
       break;

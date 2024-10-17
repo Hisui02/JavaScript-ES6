@@ -9,15 +9,23 @@ body {
   place-items: center;
 }
 
+h2 {
+  color: white;
+  text-align: center;
+  margin-top: 0;
+}
+
 #editorCadenas {
   background-color: @darker;
   padding: 3rem;
   width: 25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .datos {
-  margin-bottom: 2rem;
-  input {
+  #texto {
     box-sizing: border-box;
     padding: 0.5rem;
     font-size: larger;
@@ -29,11 +37,44 @@ body {
 
 .botones {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
   gap: 1rem;
-  button {
-    width: 15%;
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  #funcionesConversion {
+    button {
+      width: 15%;
+    }
+  }
+  #gestionAleatorio {
+    button {
+      width: 33%;
+    }
+    #selectorVelocidad {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      flex: 1;
+      input {
+        flex: 1;
+      }
+      span {
+        color: white;
+        font-size: larger;
+        font-weight: bold;
+        width: 3.5rem;
+      }
+    }
+  }
+
+  #getConsejo {
+    width: 100%;
   }
 }
 

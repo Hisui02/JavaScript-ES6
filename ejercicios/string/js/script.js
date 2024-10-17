@@ -1,6 +1,44 @@
 const texto = document.getElementById("texto");
 
-const botones = document.querySelectorAll(".botones button");
+const botones = document.querySelectorAll("#funcionesConversion button");
+
+const aleatorio = document.getElementById("aleatorio");
+const inputSelector = document.getElementById("inputSelector");
+const velocidadActual = document.getElementById("velocidadActual");
+
+const botonConsejoAleatorio = document.getElementById("getConsejo");
+botonConsejoAleatorio.addEventListener("click", () => {
+  getConsejo(texto);
+});
+
+let velocidad = 3;
+let intervaloOn = false;
+let idIntervalo = null;
+
+aleatorio.addEventListener("click", () => {
+  if (!intervaloOn) {
+    intervaloOn = true;
+    const ms = velocidad * 1000;
+    inputSelector.disabled = true;
+
+    idIntervalo = setInterval(() => {
+      const numeroRandom = Math.floor(Math.random() * botones.length);
+      botones[numeroRandom].click();
+    }, ms);
+  } else {
+    intervaloOn = false;
+    inputSelector.disabled = false;
+    clearInterval(idIntervalo);
+  }
+  const estadoBoton = aleatorio.lastChild;
+  estadoBoton.innerText = intervaloOn ? "ON" : "OFF";
+  estadoBoton.style.color = intervaloOn ? "red" : "black";
+});
+
+inputSelector.addEventListener("change", (e) => {
+  velocidad = e.target.value;
+  velocidadActual.innerText = `${e.target.value} s.`;
+});
 
 const functionsHandler = (id) => {
   switch (id) {

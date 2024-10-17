@@ -6,15 +6,20 @@ body {
   height: 100dvh;
   place-items: center;
 }
+h2 {
+  color: white;
+  text-align: center;
+  margin-top: 0;
+}
 #editorCadenas {
   background-color: #2c302e;
   padding: 3rem;
   width: 25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.datos {
-  margin-bottom: 2rem;
-}
-.datos input {
+.datos #texto {
   box-sizing: border-box;
   padding: 0.5rem;
   font-size: larger;
@@ -24,12 +29,39 @@ body {
 }
 .botones {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
   gap: 1rem;
 }
-.botones button {
+.botones div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.botones #funcionesConversion button {
   width: 15%;
+}
+.botones #gestionAleatorio button {
+  width: 33%;
+}
+.botones #gestionAleatorio #selectorVelocidad {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+.botones #gestionAleatorio #selectorVelocidad input {
+  flex: 1;
+}
+.botones #gestionAleatorio #selectorVelocidad span {
+  color: white;
+  font-size: larger;
+  font-weight: bold;
+  width: 3.5rem;
+}
+.botones #getConsejo {
+  width: 100%;
 }
 button {
   padding: 1rem 0;

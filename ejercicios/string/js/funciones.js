@@ -98,3 +98,12 @@ const consonantesMinus = (texto) => {
 
   return salida.join("");
 };
+
+const getConsejo = async (texto) => {
+  const data = await fetch("https://api.adviceslip.com/advice");
+  dataJson = await data.json();
+  const {
+    slip: { advice },
+  } = dataJson;
+  texto.value = advice;
+};

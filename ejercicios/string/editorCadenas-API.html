@@ -15,12 +15,13 @@
     <div id="editorCadenas">
       <h2>Editor de Cadenas</h2>
       <div class="datos">
-        <input
+        <!-- <input
           type="text"
           name="texto"
           id="texto"
           placeholder="Escribe lo que quieras editar aquí..."
-        />
+        /> -->
+        <textarea name="texto" id="texto"></textarea>
       </div>
       <div class="botones">
         <div id="funcionesConversion">
@@ -41,6 +42,9 @@
             <input id="inputSelector" type="range" min="1" max="10" value="3" />
             <span id="velocidadActual">3 s.</span>
           </div>
+        </div>
+        <div>
+          <button id="getConsejo">Cargar un consejo aleatorio</button>
         </div>
       </div>
     </div>

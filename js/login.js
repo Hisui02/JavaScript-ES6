@@ -6,11 +6,11 @@ const mostrarPagina = () => {
 
 const logoutButton = document.getElementById("logoutButton");
 logoutButton.onclick = function (e) {
-  eraseCookie("loggedIn");
+  localStorage.removeItem("loggedIn");
   location.reload();
 };
 
-if (getCookie("loggedIn") === "true") mostrarPagina();
+if (localStorage.getItem("loggedIn") === "true") mostrarPagina();
 
 const form = document.getElementById("loginForm");
 form.onsubmit = function (e) {
@@ -29,6 +29,7 @@ form.onsubmit = function (e) {
     texto.innerHTML = "Usuario demasiado corto";
     texto.style.color = "red";
     user.style.borderColor = "red";
+    getCookie;
     return;
   }
 
@@ -38,7 +39,7 @@ form.onsubmit = function (e) {
     user.style.borderColor = "red";
     psswd.style.borderColor = "red";
   } else {
-    setCookie("loggedIn", "true", 60);
+    localStorage.setItem("loggedIn", "true");
     document.getElementById("greeter").innerHTML =
       "Bienvenido, " + user.value + "!";
 

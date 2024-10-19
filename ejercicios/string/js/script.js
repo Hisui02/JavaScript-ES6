@@ -7,9 +7,10 @@ const inputSelector = document.getElementById("inputSelector");
 const velocidadActual = document.getElementById("velocidadActual");
 
 const botonConsejoAleatorio = document.getElementById("getConsejo");
-botonConsejoAleatorio.addEventListener("click", () => {
-  getConsejo(texto);
-});
+botonConsejoAleatorio && // Sólo añado el eventListener si existe el botón, así puedo reutilizar toda la lógica sin necesitar un segundo archivo de script.
+  botonConsejoAleatorio.addEventListener("click", () => {
+    getConsejo(texto);
+  });
 
 let velocidad = 3;
 let intervaloOn = false;
